@@ -1,0 +1,45 @@
+{
+  "name": "tailwind-v4-project",
+  "version": "1.0.0",
+  "scripts": {
+    "s": "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/assets/css/style.css -o ./src/assets/css/output.css --minify"
+  },
+  "dependencies": {
+    "@fontsource/cinzel": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.9",
+    "swiper": "^11.2.10",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  },
+  "tailwind": {
+    "content": [
+      "./*.html",
+      "./src/assets/**/*.{html,js}"
+    ],
+    "theme": {
+      "extend": {
+        "fontFamily": {
+          "inter": [
+            "Inter",
+            "sans-serif"
+          ]
+        }
+      }
+    },
+    "plugins": [
+      "@tailwindcss/forms",
+      "@tailwindcss/typography",
+      "@tailwindcss/aspect-ratio",
+      "@tailwindcss/container-queries"
+    ]
+  }
+}

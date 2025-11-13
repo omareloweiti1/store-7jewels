@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@import "@fontsource/inter";
+@import "@fontsource/inter/700.css";
+
+@import "@fontsource/cinzel";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+/* #D5C06C */
+
+@layer base {
+  .active-link {
+    @apply text-[#D5C06C] border-b-4 border-[#D5C06C] pb-2;
+  }
+}
