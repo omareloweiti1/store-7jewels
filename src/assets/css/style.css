@@ -5,6 +5,10 @@
 
 @import "@fontsource/cinzel";
 
+@theme {
+  --bg-asia: url("../img/products-Asia/Rectangle.png");
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -13,5 +17,11 @@ body {
 @layer base {
   .active-link {
     @apply text-[#D5C06C] border-b-4 border-[#D5C06C] pb-2;
+  }
+  .active-linkbar {
+    @apply text-[#D5C06C];
+  }
+  .active-pagination {
+    @apply bg-[#D5C06C] rounded-full text-[#1F1F1E];
   }
 }

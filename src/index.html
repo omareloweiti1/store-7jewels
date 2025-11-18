@@ -722,12 +722,8 @@
 
         <!-- <div class="w-full swiper-slide"> -->
         <!-- Main Image -->
-        <!-- <img
-                src="assets/img/hero/world map.png"
-                alt="Luxury Jewelry World Map"
-                class="w-[90%] max-w-[1270px] h-[720px] md:h-[720px] object-contain drop-shadow-lg"
-              />
-            </div> -->
+
+        <!-- </div> -->
         <!-- ASIA -->
         <!-- <div class="w-full swiper-slide">
               <div class="flex flex-wrap items-center justify-between mt-10">
@@ -962,8 +958,58 @@
 
         <div class="relative w-full">
           <div class="max-w-[1230px] mx-auto">
+            <!-- map -->
+            <!-- <div class="" data-current_continent="asia" data-silder_index="0">
+                  <div class="flex items-center justify-between">
+                    <div class="w-full p-6 text-left">
+                      <img src="assets/img/hero/world map.png" alt="Luxury Jewelry World Map" class="w-[1200px] min-w-[1200px] max-w-[1200px] h-[720px] object-contain drop-shadow-lg"/>
+                    </div>
+                  </div>
+                </div> -->
+            <!-- <div id="continentMap" class="relative w-full max-w-[1230px] mx-auto"> -->
+
+            <!-- <img id="mainMapImage" src="assets/img/hero/world map.png" class="w-[1200px] h-[720px] object-contain drop-shadow-lg"> -->
+
+            <!-- مناطق القارات (Hotspots) -->
+            <!-- Asia -->
+            <!-- <div class="continent-area absolute cursor-pointer"
+                     data-continent="asia"
+                     data-slide="1"
+                     style="top: 190px; left: 700px; width: 150px; height: 160px;"></div>
+
+                <div class="continent-area absolute cursor-pointer"
+                     data-continent="Africa"
+                     data-slide="2"
+                     style="top: 300px; left: 620px; width: 140px; height: 180px;"></div>
+
+                <div class="continent-area absolute cursor-pointer"
+                     data-continent="southAmerica"
+                     data-slide="3"
+                     style="top: 320px; left: 380px; width: 120px; height: 230px;"></div>
+
+                <div class="continent-area absolute cursor-pointer"
+                     data-continent="NorthAamerica"
+                     data-slide="4"
+                     style="top: 120px; left: 330px; width: 200px; height: 220px;"></div>
+
+                <div class="continent-area absolute cursor-pointer"
+                     data-continent="australia"
+                     data-slide="5"
+                     style="top: 420px; left: 900px; width: 120px; height: 110px;"></div>
+
+                <div class="continent-area absolute cursor-pointer"
+                     data-continent="europe"
+                     data-slide="6"
+                     style="top: 130px; left: 650px; width: 120px; height: 110px;"></div> -->
+
+            <!-- </div> -->
+
+            <!-- <div id="continentMap" class="swiper-slide relative w-full max-w-[1230px] mx-auto" data-silder_index="0">
+              <img id="mainMapImage" src="assets/img/hero/world map.png" class="w-[1200px] h-[720px] object-contain drop-shadow-lg">
+            </div> -->
+
             <!-- Slider main container -->
-            <div class="w-full swiper">
+            <div class="w-full swiper mySwiper-Hero">
               <div class="w-full swiper-wrapper p-2 pb-0">
                 <!-- Slide: Asia -->
                 <div
@@ -1095,7 +1141,7 @@
                         <img
                           src="assets/img/hero/Africa-small.png"
                           alt="asia small"
-                          class="absolute top-2 right-4 w-[270px] h-[205px]"
+                          class="absolute top-[58px] right-36 w-44 h-[130px]"
                         />
                       </div>
                     </div>
@@ -1172,7 +1218,7 @@
                         <img
                           src="assets/img/hero/southAmerica-small.png"
                           alt="asia small"
-                          class="absolute top-2 right-4 w-[270px] h-[205px]"
+                          class="absolute top-24 left-[30px] w-[115px] h-[150px]"
                         />
                       </div>
                     </div>
@@ -1249,7 +1295,7 @@
                         <img
                           src="assets/img/hero/NorthAamerica-small.png"
                           alt="asia small"
-                          class="absolute top-2 right-4 w-[270px] h-[205px]"
+                          class="absolute top-0 right-[230px] w-[230px] h-[180px]"
                         />
                       </div>
                     </div>
@@ -1326,7 +1372,7 @@
                         <img
                           src="assets/img/hero/australia-small.png"
                           alt="asia small"
-                          class="absolute top-2 right-4 w-[270px] h-[205px]"
+                          class="absolute top-[115px] right-[45px] w-[100px] h-20"
                         />
                       </div>
                     </div>
@@ -1403,7 +1449,7 @@
                         <img
                           src="assets/img/hero/europe-small.png"
                           alt="asia small"
-                          class="absolute top-2 right-4 w-[270px] h-[205px]"
+                          class="absolute top-3 right-[148px] w-[140px] h-[100px]"
                         />
                       </div>
                     </div>
@@ -1429,7 +1475,7 @@
               <div class="swiper-button-next"></div>
 
               <!-- Badges -->
-              <div class="w-full flex justify-end mb-10 pr-10">
+              <div class="w-full flex justify-end mb-10 pr-10 badges-container">
                 <div
                   class="flex flex-wrap gap-4 bg-[#C0AA6738] text-white px-2 py-1 rounded-lg"
                 >
@@ -1481,7 +1527,7 @@
           </div>
         </div>
 
-        <!--   Cards Section -->
+        <!-- Cards Section -->
         <div class="py-16">
           <div class="mx-auto">
             <div
@@ -1598,7 +1644,7 @@
           </div>
 
           <!-- Product Slider -->
-          <div class="swiper mySwiper">
+          <div class="swiper mySwiper-Product">
             <div class="swiper-wrapper">
               <!-- Product -->
               <div class="swiper-slide h-[450px]">
@@ -1947,7 +1993,9 @@
       <!-- Swiper Cities Section -->
       <div class="overflow-hidden bg-[#AC8A49] h-28">
         <div class="container-partner-countries relative">
-          <div class="swiper w-full overflow-hidden slider-partner-countries">
+          <div
+            class="swiper mySwiper-Cities w-full overflow-hidden slider-partner-countries"
+          >
             <div class="swiper-wrapper">
               <div
                 class="swiper-slide text-center text-[21px] text-black whitespace-nowrap h-28 pt-10"
@@ -2037,7 +2085,7 @@
     </main>
 
     <!-- start:: footer -->
-    <footer class="">
+    <footer>
       <!-- Footer Top -->
       <div class="py-10">
         <div class="mx-auto px-8">
@@ -2224,15 +2272,18 @@
     </footer>
     <!-- end:: footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- swiper Hero -->
     <script>
-      var mySwiper = new Swiper(".swiper", {
+      var mySwiperHero = new Swiper(".mySwiper-Hero", {
         loop: true,
         speed: 2500,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -2245,12 +2296,12 @@
 
       $(document).on("click", ".filter-btn", function () {
         var index = $(this).data("index");
-        mySwiper.slideToLoop(index);
+        mySwiperHero.slideToLoop(index);
         updateActiveButton(index);
       });
 
-      mySwiper.on("slideChange", function () {
-        var realIndex = mySwiper.realIndex;
+      mySwiperHero.on("slideChange", function () {
+        var realIndex = mySwiperHero.realIndex;
         updateActiveButton(realIndex);
       });
 
@@ -2261,9 +2312,89 @@
       }
     </script>
 
+    <!-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const slider = document.querySelector(".mySwiper-Hero");
+              const mapImage = document.getElementById("continentMap");
+            
+              const mySwiperHero = new Swiper(".mySwiper-Hero", {
+                speed: 800,
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+              });
+            
+              setTimeout(() => {
+                mapImage.style.display = "none";   
+                slider.classList.remove("hidden");  
+              }, 20000);
+            
+              const continentButtons = document.querySelectorAll(".filter-btn");
+              continentButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                  if (slider.classList.contains("hidden")) {
+                    mapImage.style.display = "none";
+                    slider.classList.remove("hidden");
+                  }
+                  const index = parseInt(btn.dataset.index);
+                  mySwiperHero.slideTo(index);
+                });
+              });
+            });
+        </script> -->
+
+    <!-- <script>
+      var mySwiper = new Swiper(".mySwiper-Hero", {
+        loop: true,
+        speed: 2500,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChange: function () {
+            var realIndex = this.realIndex;
+
+            const prevBtn = document.querySelector(".swiper-button-prev");
+            const nextBtn = document.querySelector(".swiper-button-next");
+            const badges = document.querySelector(".badges-container");
+
+            if (realIndex === 0) {
+              prevBtn.style.display = "none";
+              nextBtn.style.display = "none";
+              badges.style.display = "none";
+            } else {
+              prevBtn.style.display = "block";
+              nextBtn.style.display = "block";
+              badges.style.display = "flex";
+            }
+
+            updateActiveButton(realIndex);
+          },
+        },
+      });
+
+      $(document).on("click", ".filter-btn", function () {
+        var index = $(this).data("index");
+        mySwiper.slideToLoop(index);
+        updateActiveButton(index);
+      });
+
+      function updateActiveButton(index) {
+        var item = $('.filter-btn[data-index="' + index + '"]');
+        $(".filter-btn").removeClass("active-link");
+        $(item).addClass("active-link");
+      }
+    </script> -->
+
     <!-- swiper New Items -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
+      var swiperProduct = new Swiper(".mySwiper-Product", {
         slidesPerView: 4,
         spaceBetween: 20,
         loop: true,
@@ -2279,9 +2410,10 @@
         },
       });
     </script>
+
     <!-- Swiper Cities Section -->
     <script>
-      const countriesSwiper = new Swiper(".slider-partner-countries", {
+      const countriesSwiper = new Swiper(".mySwiper-Cities", {
         slidesPerView: 5,
         spaceBetween: 20,
         loop: true,
@@ -2356,16 +2488,13 @@
         const menu = document.getElementById(id);
         const allMenus = document.querySelectorAll('[id$="Menu"]');
 
-        // أغلق جميع القوائم المفتوحة أولاً
         allMenus.forEach((m) => {
           if (m !== menu) m.classList.add("hidden");
         });
 
-        // تبديل القائمة الحالية
         menu.classList.toggle("hidden");
       }
 
-      // إغلاق القائمة عند الضغط خارجها
       window.addEventListener("click", function (e) {
         const dropdowns = document.querySelectorAll('[id$="Menu"]');
         dropdowns.forEach((menu) => {

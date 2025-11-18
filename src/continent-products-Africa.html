@@ -1,0 +1,1689 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/logo/favicon1.svg"
+    />
+    <title>Home | 7jewels</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/output.css" />
+  </head>
+  <body class="bg-[#1F1F1E] text-white">
+    <!--  Header Section -->
+    <header class="hidden lg:block bg-black text-[#D5C06C] sticky top-0 z-50">
+      <!--  Top Bar -->
+      <div class="mx-auto flex items-center justify-between py-3 px-6 pt-4">
+        <!-- Left: Currency -->
+        <div class="flex items-center space-x-2">
+          <img
+            src="assets/img/heder/Path 3404.svg"
+            alt="currency"
+            class="w-5 h-5"
+          />
+          <!-- 🌍 Currency Dropdown -->
+          <div class="relative">
+            <button
+              onclick="toggleDropdown('currencyMenu')"
+              class="flex items-center gap-1 text-white text-sm focus:outline-none"
+            >
+              US Dollar
+              <svg
+                class="w-3 h-3 text-white transition-transform duration-200"
+                id="currencyArrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="currencyMenu"
+              class="hidden absolute left-0 w-28 bg-black border border-[#222] text-white text-sm rounded-md shadow-lg z-50"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >USD</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >EUR</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >EGP</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >SAR</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Login / Register / Cart / Search -->
+        <div class="flex items-center space-x-5 text-white text-base">
+          <a
+            href="#"
+            class="flex items-center text-[#808080] hover:text-[#f5d36b]"
+          >
+            <img
+              src="assets/img/heder/user.svg"
+              alt="user"
+              class="w-[13px] h-[15px] mr-2"
+            />
+            Login
+          </a>
+
+          <span class="text-[#808080]">|</span>
+
+          <a href="#" class="text-base hover:text-[#f5d36b]">Register</a>
+
+          <!-- Cart -->
+          <div class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22.412"
+              height="23.722"
+              viewBox="0 0 22.412 23.722"
+            >
+              <g id="cart" transform="translate(0.749 -13.139)">
+                <path
+                  id="Path_33955"
+                  d="M15.275,16.973H5.624c-3.545,0-6.264-1.28-5.492-6.434l.9-6.984C1.508.984,3.148,0,4.587,0H16.354c1.46,0,3.005,1.058,3.556,3.556l.9,6.984C21.465,15.111,18.82,16.973,15.275,16.973Z"
+                  transform="translate(0 19.138)"
+                  fill="rgba(0,0,0,0)"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Path_33956"
+                  d="M10.01,4.995A5,5,0,0,0,5.016,0h0A4.995,4.995,0,0,0,0,4.995H0"
+                  transform="translate(5.422 13.889)"
+                  fill="rgba(0,0,0,0)"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Line_192"
+                  d="M.556.529H.5"
+                  transform="translate(13.313 23.561)"
+                  fill="rgba(0,0,0,0)"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Line_193"
+                  d="M.556.529H.5"
+                  transform="translate(6.57 23.561)"
+                  fill="rgba(0,0,0,0)"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </g>
+            </svg>
+            <!-- <img src="assets/img/heder/cart.svg" alt="cart" class="w-5 h-5" /> -->
+            <span
+              class="absolute -top-2 -right-2 flex items-center justify-center bg-red-600 text-white text-[10px] w-4 h-4 rounded-full leading-none"
+              >10</span
+            >
+          </div>
+
+          <!-- Search -->
+          <button>
+            <svg
+              class="w-5 h-5 text-white hover:text-[#f5d36b]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!--   Centered Navigation -->
+      <nav class="w-full">
+        <ul
+          class="flex justify-center items-center gap-10 py-4 text-[#D5C06C] relative"
+        >
+          <!-- Dropdown: Categories -->
+          <li class="relative">
+            <button
+              onclick="toggleDropdown('categoriesDropdown')"
+              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+            >
+              Categories
+              <svg
+                class="w-3 h-3 text-[#D5C06C]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <ul
+              id="categoriesDropdown"
+              class="absolute left-0 hidden bg-black text-white mt-2 w-40 rounded-md shadow-lg border border-[#222]"
+            >
+              <li>
+                <a
+                  href="rings.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Rings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="necklaces.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Necklaces</a
+                >
+              </li>
+              <li>
+                <a
+                  href="bracelets.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Bracelets</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Dropdown: Occasions -->
+          <li class="relative">
+            <button
+              onclick="toggleDropdown('occasionsDropdown')"
+              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+            >
+              Occasions
+              <svg
+                class="w-3 h-3 text-[#D5C06C]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <ul
+              id="occasionsDropdown"
+              class="absolute left-0 hidden bg-black text-white mt-2 w-44 rounded-md shadow-lg border border-[#222]"
+            >
+              <li>
+                <a
+                  href="wedding.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Wedding</a
+                >
+              </li>
+              <li>
+                <a
+                  href="birthday.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Birthday</a
+                >
+              </li>
+              <li>
+                <a
+                  href="anniversary.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Anniversary</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Logo in center -->
+          <li>
+            <a href="index.html" class="flex items-center">
+              <img
+                src="assets/img/hero/img-7.png"
+                alt="logo"
+                class="w-[38px] h-[60px] object-contain"
+              />
+            </a>
+          </li>
+
+          <!-- Dropdown: New Arrivals -->
+          <li class="relative">
+            <button
+              onclick="toggleDropdown('newArrivalsDropdown')"
+              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+            >
+              New Arrivals
+              <svg
+                class="w-3 h-3 text-[#D5C06C]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <ul
+              id="newArrivalsDropdown"
+              class="absolute left-0 hidden bg-black text-white mt-2 w-40 rounded-md shadow-lg border border-[#222]"
+            >
+              <li>
+                <a
+                  href="rings.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Rings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="necklaces.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Necklaces</a
+                >
+              </li>
+              <li>
+                <a
+                  href="bracelets.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Bracelets</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Dropdown: Deals -->
+          <li class="relative">
+            <button
+              onclick="toggleDropdown('dealsDropdown')"
+              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+            >
+              Deals
+              <svg
+                class="w-3 h-3 text-[#D5C06C]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <ul
+              id="dealsDropdown"
+              class="absolute left-0 hidden bg-black text-white mt-2 w-40 rounded-md shadow-lg border border-[#222]"
+            >
+              <li>
+                <a
+                  href="rings.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Rings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="necklaces.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Necklaces</a
+                >
+              </li>
+              <li>
+                <a
+                  href="bracelets.html"
+                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
+                  >Bracelets</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--  Mobile Navigation (hidden on desktop) -->
+    <div class="lg:hidden bg-black text-[#D5C06C] border-t border-[#222]">
+      <!--   Top Bar -->
+      <div
+        class="flex items-center justify-between px-5 py-3 border-b border-[#222]"
+      >
+        <!-- Left: Currency -->
+        <div class="flex items-center space-x-2">
+          <img
+            src="assets/img/heder/Path 3404.svg"
+            alt="currency"
+            class="w-5 h-5"
+          />
+          <!--   Currency Dropdown -->
+          <div class="relative">
+            <button
+              onclick="toggleDropdown('currencyMenu')"
+              class="flex items-center gap-1 text-white text-sm focus:outline-none"
+            >
+              US Dollar
+              <svg
+                class="w-3 h-3 text-white transition-transform duration-200"
+                id="currencyArrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="currencyMenu"
+              class="hidden absolute left-0 w-28 bg-black border border-[#222] text-white text-sm rounded-md shadow-lg z-50"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >USD</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >EUR</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >EGP</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 hover:bg-[#1a1a1a] hover:text-[#f5d36b]"
+                  >SAR</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="index.html" class="flex items-center gap-2 transition">
+          <img
+            src="assets/img/logo/favicon1.svg"
+            alt="7Jewels Logo"
+            class="w-6 h-6 object-contain"
+          />
+        </a>
+
+        <!-- Right: Login / Cart / Search -->
+        <div class="flex items-center space-x-5 text-white text-base">
+          <!-- Cart -->
+          <div class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22.412"
+              height="23.722"
+              viewBox="0 0 22.412 23.722"
+            >
+              <g transform="translate(0.749 -13.139)">
+                <path
+                  d="M15.275,16.973H5.624c-3.545,0-6.264-1.28-5.492-6.434l.9-6.984C1.508.984,3.148,0,4.587,0H16.354c1.46,0,3.005,1.058,3.556,3.556l.9,6.984C21.465,15.111,18.82,16.973,15.275,16.973Z"
+                  transform="translate(0 19.138)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M10.01,4.995A5,5,0,0,0,5.016,0h0A4.995,4.995,0,0,0,0,4.995H0"
+                  transform="translate(5.422 13.889)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                />
+              </g>
+            </svg>
+            <span
+              class="absolute -top-2 -right-2 flex items-center justify-center bg-red-600 text-white text-[10px] w-4 h-4 rounded-full"
+              >10</span
+            >
+          </div>
+
+          <!-- Search -->
+          <button>
+            <svg
+              class="w-5 h-5 text-white hover:text-[#f5d36b]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <!-- Menu Button -->
+          <button id="mobileMenuBtn" class="flex flex-col space-y-1">
+            <span class="block w-6 h-0.5 bg-[#D5C06C]"></span>
+            <span class="block w-6 h-0.5 bg-[#D5C06C]"></span>
+            <span class="block w-6 h-0.5 bg-[#D5C06C]"></span>
+          </button>
+        </div>
+      </div>
+
+      <!--   Hidden Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden flex-col bg-black text-[#D5C06C] px-6 pb-4 border-t border-[#333] space-y-1"
+      >
+        <!--   Categories -->
+        <div class="border-b border-[#222] py-2">
+          <button
+            class="flex justify-between items-center w-full text-left"
+            onclick="toggleDropdown('catMenu')"
+          >
+            <span>Categories</span>
+            <svg
+              class="w-4 h-4 text-[#f5d36b]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <ul
+            id="catMenu"
+            class="hidden mt-2 pl-4 space-y-1 text-sm text-white"
+          >
+            <li>
+              <a href="rings.html" class="block hover:text-[#f5d36b]">Rings</a>
+            </li>
+            <li>
+              <a href="necklaces.html" class="block hover:text-[#f5d36b]"
+                >Necklaces</a
+              >
+            </li>
+            <li>
+              <a href="bracelets.html" class="block hover:text-[#f5d36b]"
+                >Bracelets</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!--   Occasions -->
+        <div class="border-b border-[#222] py-2">
+          <button
+            class="flex justify-between items-center w-full text-left"
+            onclick="toggleDropdown('occMenu')"
+          >
+            <span>Occasions</span>
+            <svg
+              class="w-4 h-4 text-[#f5d36b]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <ul
+            id="occMenu"
+            class="hidden mt-2 pl-4 space-y-1 text-sm text-white"
+          >
+            <li><a href="#" class="block hover:text-[#f5d36b]">Wedding</a></li>
+            <li><a href="#" class="block hover:text-[#f5d36b]">Birthday</a></li>
+            <li>
+              <a href="#" class="block hover:text-[#f5d36b]">Graduation</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--   New Arrivals -->
+        <div class="border-b border-[#222] py-2">
+          <button
+            class="flex justify-between items-center w-full text-left"
+            onclick="toggleDropdown('arrivalsMenu')"
+          >
+            <span>New Arrivals</span>
+            <svg
+              class="w-4 h-4 text-[#f5d36b]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <ul
+            id="arrivalsMenu"
+            class="hidden mt-2 pl-4 space-y-1 text-sm text-white"
+          >
+            <li><a href="#" class="block hover:text-[#f5d36b]">Rings</a></li>
+            <li>
+              <a href="#" class="block hover:text-[#f5d36b]">Necklaces</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-[#f5d36b]">Bracelets</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--   Deals -->
+        <div class="border-b border-[#222] py-2">
+          <button
+            class="flex justify-between items-center w-full text-left"
+            onclick="toggleDropdown('dealsMenu')"
+          >
+            <span>Deals</span>
+            <svg
+              class="w-4 h-4 text-[#f5d36b]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <ul
+            id="dealsMenu"
+            class="hidden mt-2 pl-4 space-y-1 text-sm text-white"
+          >
+            <li>
+              <a href="#" class="block hover:text-[#f5d36b]">Discounts</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-[#f5d36b]">Limited Offers</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-[#f5d36b]">Bundle Deals</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--   Login / Register -->
+        <div class="flex flex-col gap-2 pt-3">
+          <a
+            href="#"
+            class="block w-full text-center py-2 rounded-md bg-[#f5d36b] text-black font-semibold hover:bg-[#D5C06C] transition"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="block w-full text-center py-2 rounded-md border border-[#f5d36b] text-[#f5d36b] font-semibold hover:bg-[#f5d36b] hover:text-black transition"
+            >Register</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <main class="">
+      <!-- Hero Section -->
+      <section class="w-full h-full py-0">
+        <div class="">
+          <div class="min-h-[490px]">
+            <!-- Slide -->
+            <div
+              class="relative bg-cover bg-center h-[490px] w-full"
+              style="
+                background-image: url(&quot;assets/img/products-Africa/Rectangle.png&quot;);
+              "
+            >
+              <!-- Gradient Overlay -->
+              <div
+                class="absolute inset-0"
+                style="
+                  background:
+                    linear-gradient(
+                      90deg,
+                      #f1935c 0%,
+                      rgba(241, 147, 92, 0.5) 57.14%,
+                      rgba(241, 147, 92, 0.09) 100%
+                    ),
+                    linear-gradient(
+                      180deg,
+                      #f1935c 0%,
+                      rgba(241, 147, 92, 0.51) 49%,
+                      rgba(241, 147, 92, 0.12) 100%
+                    );
+                "
+              ></div>
+              <div class="relative w-full h-full">
+                <div class="mx-auto h-full">
+                  <div class="flex items-center h-full">
+                    <!-- Text Column -->
+                    <div class="w-full lg:w-8/12 px-4">
+                      <div class="lg:w-[80%] text-black lg:mx-20">
+                        <h2 class="text-[53px] mb-4 lg:mt-24">Africa</h2>
+
+                        <h4
+                          class="text-xl mb-4 mt-4 max-w-[590px] max-h-[84px] overflow-hidden"
+                        >
+                          Proin ac quam et lectus vestibulum blandit. Nunc
+                          maximus nibh at placerat tincidunt. Nam sem lacus,
+                          ornare non ante sed, ultricies fringilla massa. Ut
+                          congue, elit non tempus elementum, sem risus ti
+                          ncidunt diam, vitae sodales diam ipsum vitae purus.
+                          Fusce tristique erat nulla, vel viverra mi auct or
+                          non. Integer ante lorem, dictum at felis at, bibendum
+                          egestas augue. Aenean vestibulum lacus dol or, id
+                          tincidunt arcu pellentesque ut. Mauris sed venenatis
+                          diam, quis aliquam odio. Mauris lobortis augue
+                          placerat elit ultrices, non laoreet nunc semper.
+                          Phasellus dolor sapien, molestie at ante id, porta
+                          interdum nisl. Duis sit amet ante feu giat enim
+                          viverra sagittis. Sed vitae pulvinar augue. Donec sit
+                          amet dolor non velit tincidunt commodo.
+                        </h4>
+
+                        <!-- Stats -->
+                        <div class="pt-12">
+                          <div class="flex gap-6">
+                            <!-- Shops -->
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="w-20 h-20 bg-white rounded-full flex items-center justify-center"
+                              >
+                                <img
+                                  src="assets/img/products-Asia/Glyph.png"
+                                  class="w-10 h-10"
+                                  alt="Shop Icon"
+                                />
+                              </div>
+
+                              <div>
+                                <h1 class="text-3xl font-semibold">12</h1>
+                                <h4 class="text-sm">Number of shops</h4>
+                              </div>
+                            </div>
+
+                            <!-- Products -->
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="w-20 h-20 bg-white rounded-full flex items-center justify-center"
+                              >
+                                <img
+                                  src="assets/img/products-Asia/necklace(1).png"
+                                  class="w-10 h-10"
+                                  alt="Shop Icon"
+                                />
+                              </div>
+
+                              <div>
+                                <h1 class="text-3xl font-semibold">1,002</h1>
+                                <h4 class="text-sm">Number of shops</h4>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toolbar Container -->
+          <div
+            class="fixed right-5 top-[100px] lg:top-[200px] z-40 flex flex-col items-end"
+          >
+            <!-- Icon Trigger -->
+            <button
+              id="toggle-continents"
+              class="w-[58px] h-[58px] flex items-center z-50 justify-center bg-[#262626] rounded-full border-2 border-[#D5C04C] relative"
+            >
+              <img
+                src="assets/img/products-Asia/tabler_world-search.svg"
+                class="w-10 h-10"
+                alt="Toggle Continents"
+              />
+            </button>
+            <!-- Continents Links -->
+            <div
+              id="continents-links" style="display:none"
+              class="absolute right-0 lg:top-1/2 lg:-translate-y-1/2 lg:right-2.5   flex-col lg:flex-row z-10 gap-6 lg:w-max px-10 py-6 lg:px-8 lg:py-3.5 bg-[#262626]/90 backdrop-blur-sm rounded-[30px] lg:rounded-full"
+            >
+              <a
+                href="continent-products-Asia.html"
+                class="px-8 py-4 lg:px-6 lg:py-1 rounded-lg hover:text-[#D5C06C] text-white transition-all"
+                >Asia</a
+              >
+              <a
+                href="continent-products-Africa.html"
+                class="px-8 py-4 lg:px-6 lg:py-1 active-linkbar rounded-lg hover:text-[#D5C06C] transition-all"
+                >Africa</a
+              >
+              <a
+                href="continent-products-SouthAmerica.html"
+                class="px-0 py-4 lg:px-6 lg:py-1 text-white rounded-lg hover:text-[#D5C06C] transition-all"
+                >South America</a
+              >
+              <a
+                href="continent-products-NorthAmerica.html"
+                class="px-0 py-4 lg:px-6 lg:py-1 text-white rounded-lg hover:text-[#D5C06C] transition-all"
+                >North America</a
+              >
+              <a
+                href="continent-products-Austuralia.html"
+                class="px-8 py-4 lg:px-6 lg:py-1 text-white rounded-lg hover:text-[#D5C06C] transition-all"
+                >Australia</a
+              >
+              <a
+                href="continent-products-Europe.html"
+                class="px-8 py-4 lg:px-6 lg:pr-12 lg:py-1 text-white rounded-lg hover:text-[#D5C06C] transition-all"
+                >Europe</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section -->
+
+      <!-- products -->
+      <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+          <!-- Title + Filters -->
+          <div class="mb-8">
+            <div
+              class="flex flex-col lg:flex-row items-center justify-between gap-4"
+            >
+              <h2 class="text-[33px]">Products</h2>
+
+              <div class="flex items-center gap-3">
+                <!-- Country Filter -->
+                <div class="relative w-full max-w-xs">
+                  <select
+                    id="country_id"
+                    class="w-full appearance-none border border-[#7E7E7E] rounded-lg bg-[#1F1F1E] text-white text-center px-8 py-3 pr-12"
+                  >
+                    <option value="" disabled selected>Country</option>
+                    <option value="11">Argentina</option>
+                    <option value="27">Bolivia</option>
+                  </select>
+
+                  <svg
+                    class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M5.8 7l4.2 4.3L14.2 7"></path>
+                  </svg>
+                </div>
+
+                <!-- Order By -->
+                <div class="relative w-full max-w-xs">
+                  <select
+                    id="country_id"
+                    class="w-full appearance-none border border-[#7E7E7E] rounded-lg bg-[#1F1F1E] text-white text-center px-8 py-3 pr-12"
+                  >
+                    <option value="" disabled selected>Sort By</option>
+                    <option value="27">Bolivia</option>
+                    <option value="11">Argentina</option>
+                  </select>
+                  <svg
+                    class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M5.8 7l4.2 4.3L14.2 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="mb-10">
+            <ul class="flex flex-wrap items-center justify-center gap-4">
+              <input type="hidden" value="all" id="category_id" />
+              <li>
+                <div
+                  data-id="all"
+                  class="px-5 py-2 cursor-pointer rounded-lg text-[#D5C06C] border-b-3 border-[#D5C06C] font-medium is-checked"
+                >
+                  All
+                </div>
+              </li>
+              <li>
+                <div
+                  data-id="1"
+                  class="flex items-center gap-2 px-5 py-2 cursor-pointer rounded-lg text-[#A5A5A5]"
+                >
+                  <img
+                    src="assets/img/products-Asia/invitation.png"
+                    class=""
+                  />Earrings
+                </div>
+              </li>
+              <li>
+                <div
+                  data-id="5"
+                  class="flex items-center gap-2 px-5 py-2 cursor-pointer rounded-lg text-[#A5A5A5]"
+                >
+                  <img
+                    src="assets/img/products-Asia/necklace.png"
+                    class=""
+                  />Bracelets
+                </div>
+              </li>
+              <li>
+                <div
+                  data-id="4"
+                  class="flex items-center gap-2 px-5 py-2 cursor-pointer rounded-lg text-[#A5A5A5]"
+                >
+                  <img
+                    src="assets/img/products-Asia/bracelet(1).png"
+                    class=""
+                  />Rings
+                </div>
+              </li>
+              <li>
+                <div
+                  data-id="2"
+                  class="flex items-center gap-2 px-5 py-2 cursor-pointer rounded-lg text-[#A5A5A5]"
+                >
+                  <img
+                    src="assets/img/products-Asia/earrings.png"
+                    class=""
+                  />Necklaces
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Products Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            id="products_container"
+          >
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="h-[450px]">
+              <div class="rounded-lg overflow-hidden shadow-md">
+                <a href="">
+                  <div class="w-full h-[300px] overflow-hidden">
+                    <img
+                      src="assets/img/items/diamond-beach.jpg"
+                      alt="Silver Fashion Anklet"
+                      class="w-full h-[300px] object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </a>
+
+                <div class="p-4 text-left max-w-[300px] overflow-hidden">
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
+                  <div class="flex justify-between items-center text-lg">
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Products Grid -->
+
+          <!-- No Products -->
+          <!-- <div class="text-center">
+            <div class="bg-red-100 border-red-500 text-red-700 p-4 rounded-lg font-semibold">
+              No Products
+            </div>
+          </div> -->
+          <div class="flex items-center justify-center gap-3 text-white mt-5">
+            <button
+              class="p-3 bg-[#313130] border border-[#545453] rounded-full hover:bg-gray-800"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <div class="flex items-center gap-1">
+              <span class="px-3.5 py-3 active-pagination">01</span>
+              <span class="px-3.5 py-3 text-[#6E6E6E] cursor-pointer">02</span>
+              <span class="px-3.5 py-3 text-[#6E6E6E] cursor-pointer">03</span>
+              <span class="px-3.5 py-3 text-[#6E6E6E]">...</span>
+              <span class="px-3.5 py-3 text-[#6E6E6E] cursor-pointer">15</span>
+            </div>
+
+            <button
+              class="p-3 bg-[#313130] border border-[#545453] rounded-full hover:bg-gray-800"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- products -->
+    </main>
+
+    <!-- start:: footer -->
+    <footer class="border-t border-[#545453]">
+      <!-- Footer Top -->
+      <div class="py-10">
+        <div class="mx-auto px-8">
+          <div class="flex flex-wrap -mx-4">
+            <!-- Column 1 -->
+            <div class="w-full lg:w-5/12 px-4 mb-8 lg:mb-0">
+              <div class="logo">
+                <a href="">
+                  <img src="assets/img/items/Asset 1.png" class="h-24" alt="" />
+                </a>
+              </div>
+              <h6
+                class="max-h-[145px] overflow-hidden my-4 text-sm md:text-base"
+              >
+                Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at
+                placera t tincidunt. Nam sem lacus, ornare non ante sed,
+                ultricies fringilla mass a. Ut congue, elit non tempus
+                elementum, sem risus tincidunt diam, vitae s odales diam ipsum
+                vitae purus. Fusce tristique erat nulla, vel viverra mi a uctor
+                non. Integer ante lorem, dictum at felis at, bibendum egestas
+                augue. Aenean vestibulum lacus dolor, id tincidunt arcu
+                pellentesque ut. Mauris se d venenatis diam, quis aliquam odio.
+                Mauris lobortis augue placerat elit ul trices, non laoreet nunc
+                semper. Phasellus dolor sapien, molestie at ante i d, porta
+                interdum nisl. Duis sit amet ante feugiat enim viv erra
+                sagittis. Sed vitae pulvinar augue. Donec sit amet dolor non
+                velit tincidunt commodo.
+              </h6>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="w-1/2 sm:w-1/3 lg:w-2/12 px-4 mb-8 lg:mb-0">
+              <h5 class="font-semibold mb-4">Informations</h5>
+              <ul class="space-y-2">
+                <li>
+                  <a href="" class="flex items-center hover:text-[#E3B34F]">
+                    <i class="fa-solid fa-arrow-right text-[#E3B34F] mr-2"></i>
+                    terms of use
+                  </a>
+                </li>
+
+                <li>
+                  <a href="" class="flex items-center hover:text-[#E3B34F]">
+                    <i class="fa-solid fa-arrow-right text-[#E3B34F] mr-2"></i>
+                    Privacy Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a href="" class="flex items-center hover:text-[#E3B34F]">
+                    <i class="fa-solid fa-arrow-right text-[#E3B34F] mr-2"></i
+                    >Vendor/Buyer Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="w-1/2 sm:w-1/3 lg:w-2/12 px-4 mb-8 lg:mb-0">
+              <h5 class="font-semibold mb-4">Support &amp; Help</h5>
+              <ul class="space-y-2">
+                <li>
+                  <a href="" class="flex items-center hover:text-[#E3B34F]">
+                    <i class="fa-solid fa-arrow-right text-[#E3B34F] mr-2"></i>
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="flex items-center hover:text-[#E3B34F]">
+                    <i class="fa-solid fa-arrow-right text-[#E3B34F] mr-2"></i>
+                    Connect Us
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="flex items-center hover:text-[#E3B34F]">
+                    <i class="fa-solid fa-arrow-right text-[#E3B34F] mr-2"></i>
+                    About 7 Jewels
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="flex items-center hover:text-[#E3B34F]">
+                    <i class="fa-solid fa-arrow-right text-[#E3B34F] mr-2"></i>
+                    Open Your Store
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="w-full lg:w-3/12 px-4">
+              <h5 class="font-semibold mb-2">Follow Us</h5>
+              <ul class="flex space-x-3 mt-2">
+                <!-- Facebook -->
+                <li>
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#D5C06C] text-[#1F1F1E] hover:bg-[#1F1F1E] hover:text-[#D5C06C] transition"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+
+                <!-- Twitter -->
+                <li>
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#D5C06C] text-[#1F1F1E] hover:bg-[#1F1F1E] hover:text-[#D5C06C] transition"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+
+                <!-- Instagram -->
+                <li>
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#D5C06C] text-[#1F1F1E] hover:bg-[#1F1F1E] hover:text-[#D5C06C] transition"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+
+                <!-- LinkedIn -->
+                <li>
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#D5C06C] text-[#1F1F1E] hover:bg-[#1F1F1E] hover:text-[#D5C06C] transition"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+
+              <h5 class="font-semibold my-3">Supported Payment Methods</h5>
+              <div class="flex space-x-2">
+                <div class="hover:scale-120 transition-transform duration-300">
+                  <img src="assets/img/footer/master.png" alt="Mastercard" />
+                </div>
+                <div class="hover:scale-120 transition-transform duration-300">
+                  <img src="assets/img/footer/visa.png" alt="Visa" />
+                </div>
+              </div>
+
+              <h5 class="font-semibold my-3">Applications</h5>
+              <div class="flex space-x-2">
+                <div class="hover:scale-110 transition-transform duration-300">
+                  <a href="" target="_blank"
+                    ><img
+                      src="assets/img/footer/google-play.png"
+                      alt="Google Play"
+                  /></a>
+                </div>
+                <div class="hover:scale-110 transition-transform duration-300">
+                  <a href="" target="_blank"
+                    ><img src="assets/img/footer/app-store.png" alt="App Store"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        onclick="topScrollFunction()"
+        id="topScroll"
+        title="Go to top"
+        class="fixed bottom-5 right-5 w-12 h-12 border-2 border-[#D5C06C] text-[#D5C06C] rounded-full shadow-lg flex items-center justify-center hover:bg-[#D5C06C] hover:border-[#1F1F1E] hover:text-[#1F1F1E] transition-opacity opacity-80 hover:opacity-100 z-50"
+      >
+        <i class="fa-solid fa-chevron-up text-sm"></i>
+      </button>
+
+      <!-- Footer Bottom -->
+      <div class="py-4">
+        <div class="container mx-auto px-4">
+          <p class="text-center text-sm">
+            © 2025 7 Jewels All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- end:: footer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Toolbar Container -->
+    <script>
+      const toggleButton = document.getElementById("toggle-continents");
+      const linksContainer = document.getElementById("continents-links");
+
+      toggleButton.addEventListener("click", () => {
+        if (linksContainer.style.display === "none") {
+          linksContainer.style.display = "flex"; 
+        } else {
+          linksContainer.style.display = "none"; 
+        }
+      });
+    </script>
+
+    <!--  Script: Navigation & Dropdown Toggles -->
+    <script>
+      // toggle dropdowns
+      function toggleDropdown(id) {
+        document.getElementById(id).classList.toggle("hidden");
+      }
+
+      // toggle mobile menu
+      const menuBtn = document.getElementById("mobileMenuBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!--  Dropdown Toggle Script -->
+    <script>
+      function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        const allDropdowns = document.querySelectorAll("ul[id$='Dropdown']");
+
+        allDropdowns.forEach((menu) => {
+          if (menu.id !== id) menu.classList.add("hidden");
+        });
+
+        dropdown.classList.toggle("hidden");
+      }
+
+      document.addEventListener("click", function (e) {
+        const buttons = document.querySelectorAll(
+          "button[onclick^='toggleDropdown']"
+        );
+        const dropdowns = document.querySelectorAll("ul[id$='Dropdown']");
+        let clickedInside = false;
+
+        buttons.forEach((btn) => {
+          const menu = btn.nextElementSibling;
+          if (btn.contains(e.target) || menu.contains(e.target)) {
+            clickedInside = true;
+          }
+        });
+
+        if (!clickedInside) {
+          dropdowns.forEach((menu) => menu.classList.add("hidden"));
+        }
+      });
+    </script>
+
+    <!--  Script: Dropdown Menu Control -->
+    <script>
+      function toggleDropdown(id) {
+        const menu = document.getElementById(id);
+        const allMenus = document.querySelectorAll('[id$="Menu"]');
+
+        allMenus.forEach((m) => {
+          if (m !== menu) m.classList.add("hidden");
+        });
+
+        menu.classList.toggle("hidden");
+      }
+
+      window.addEventListener("click", function (e) {
+        const dropdowns = document.querySelectorAll('[id$="Menu"]');
+        dropdowns.forEach((menu) => {
+          if (!menu.contains(e.target) && !e.target.closest("button")) {
+            menu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+
+    <!-- Scroll To Top Button Script -->
+    <script>
+      const scrollToTopButton = document.getElementById("topScroll");
+
+      window.addEventListener("scroll", () => {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          scrollToTopButton.style.display = "flex";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      scrollToTopButton.addEventListener("click", scrollToTop);
+
+      scrollToTopButton.style.display = "none";
+    </script>
+  </body>
+</html>
