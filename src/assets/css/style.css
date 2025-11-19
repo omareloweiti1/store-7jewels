@@ -7,6 +7,8 @@
 
 @theme {
   --bg-asia: url("../img/products-Asia/Rectangle.png");
+
+    --breakpoint-desktop: 160rem; /* 2560px */
 }
 
 body {

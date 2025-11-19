@@ -710,17 +710,13 @@
 
     <main class="">
       <!-- section -->
-      <section
-        class="h-[490px] bg-no-repeat bg-center"
-        style="background-image: url(&quot;assets/img/vendor/back.png&quot;)"
-      >
+      <section class="h-[790px]  lg:h-[490px]">
+        <div class="h-[490px] bg-no-repeat bg-center " style="background-image: url(&quot;assets/img/vendor/back.png&quot;)">
         <div class="mx-auto px-4 lg:px-6">
           <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-6">
             <!-- Left column (with offset) -->
             <div class="md:col-start-2 md:col-span-6 col-span-1">
-              <h1 class="font-medium text-[#292F36] text-[80px] leading-tight">
-                Become a vendor
-              </h1>
+              <h1 class="font-medium text-[#292F36] text-[80px] leading-tight">Become a vendor</h1>
 
               <h4 class="max-w-[580px] text-[#4D5053] text-[22px] mb-4">
                 <p class="m-0">
@@ -747,6 +743,7 @@
             </div>
           </div>
         </div>
+        </div>
       </section>
       <!-- section -->
 
@@ -769,7 +766,7 @@
 
           <!-- Items Grid -->
           <div
-            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-10 justify-center"
+            class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-10 justify-center"
           >
             <!-- Item -->
             <div
@@ -937,25 +934,25 @@
               <!-- Right Top Image -->
               <img
                 src="assets/img/vendor/Images-bg-r.svg"
-                class="absolute top-[-70px] right-[-130px] w-[180px] pointer-events-none select-none"
+                class=" hidden lg:block absolute top-[-70px] right-[-130px] w-[180px] pointer-events-none select-none"
                 alt=""
               />
 
               <!-- Left Bottom Image -->
               <img
                 src="assets/img/vendor/Images-bg-l.svg"
-                class="absolute bottom-[-100px] left-[-100px] w-[180px] pointer-events-none select-none"
+                class="hidden lg:block absolute bottom-[-100px] left-[-100px] w-[180px] pointer-events-none select-none"
                 alt=""
               />
 
               <!-- Main Box -->
               <div
-                class="p-5 pt-0 w-[510px] h-[600px] bg-[#5E5333] rounded-tr-[200px] rounded-bl-[150px] flex items-center justify-center mx-auto relative z-10"
+                class="p-5 pt-0 w-[390px] h-[450px] lg:w-[510px] lg:h-[600px] bg-[#5E5333] rounded-tr-[200px] rounded-bl-[150px] flex items-center justify-center mx-auto relative z-10"
               >
                 <img
                   src="assets/img/vendor/Asset.png"
                   alt="support"
-                  class="w-[390px] h-[490px] rounded-xl object-contain"
+                  class=" w-[300px] h-[420px] lg:w-[390px] lg:h-[490px] rounded-xl object-contain"
                 />
               </div>
             </div>
@@ -964,9 +961,9 @@
       </section>
       <!--  section -->
 
-      <!--  section -->
-      <section id="categories_section" class="py-16 bg-[#5E533345]">
-        <div class="mx-auto px-16">
+      <!-- Swiper Categories  -->
+      <section id="categories_section" class="  py-16 bg-[#5E533345]">
+        <div class="mx-auto px-16 max-w-[1440px]">
           <!-- Title -->
           <div class="text-center mb-12 max-w-2xl mx-auto">
             <h2 class="font-bold text-3xl mb-4">Show & Sell</h2>
@@ -985,20 +982,12 @@
                 <div class="swiper-slide flex justify-center p-6">
                   <div class="text-center mb-6">
                     <!-- Circle Image with Shadow -->
-                    <div
-                      class="mb-2 p-2 bg-[#D5C06C] rounded-full border-4 border-white w-[150px] h-[150px] flex items-center justify-center shadow-[0_4px_20px_rgba(255,255,255,0.4)] transition-transform duration-300 hover:scale-105"
-                    >
-                      <img
-                        src="assets/img/vendor/pngwing.png"
-                        alt="Earrings"
-                        class="mx-auto w-[140px] h-[135px] object-contain"
-                      />
+                    <div class="mb-2 p-2 bg-[#D5C06C] rounded-full border-4 border-white w-[150px] h-[150px] flex items-center justify-center shadow-[0_4px_20px_rgba(255,255,255,0.4)] transition-transform duration-300 hover:scale-105">
+                      <img src="assets/img/vendor/pngwing.png" alt="Earrings" class="mx-auto w-[140px] h-[135px] object-contain"/>
                     </div>
 
                     <!-- Label -->
-                    <h5
-                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-auto -mt-1 flex items-center justify-center rounded-md"
-                    >
+                    <h5 class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-5 lg:ml-auto -mt-1 flex items-center justify-center rounded-md">
                       Earrings
                     </h5>
                   </div>
@@ -1019,7 +1008,7 @@
 
                     <!-- Label -->
                     <h5
-                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-auto -mt-1 flex items-center justify-center rounded-md"
+                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-5 lg:ml-auto -mt-1 flex items-center justify-center rounded-md"
                     >
                       Bracelets
                     </h5>
@@ -1041,7 +1030,7 @@
 
                     <!-- Label -->
                     <h5
-                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-auto -mt-1 flex items-center justify-center rounded-md"
+                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-5 lg:ml-auto -mt-1 flex items-center justify-center rounded-md"
                     >
                       Rings
                     </h5>
@@ -1063,7 +1052,7 @@
 
                     <!-- Label -->
                     <h5
-                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-auto -mt-1 flex items-center justify-center rounded-md"
+                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-5 lg:ml-auto -mt-1 flex items-center justify-center rounded-md"
                     >
                       Necklaces
                     </h5>
@@ -1085,7 +1074,7 @@
 
                     <!-- Label -->
                     <h5
-                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-auto -mt-1 flex items-center justify-center rounded-md"
+                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-5 lg:ml-auto -mt-1 flex items-center justify-center rounded-md"
                     >
                       Men’s
                     </h5>
@@ -1107,7 +1096,7 @@
 
                     <!-- Label -->
                     <h5
-                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-auto -mt-1 flex items-center justify-center rounded-md"
+                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-5 lg:ml-auto -mt-1 flex items-center justify-center rounded-md"
                     >
                       Gift sets
                     </h5>
@@ -1129,7 +1118,7 @@
 
                     <!-- Label -->
                     <h5
-                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-auto -mt-1 flex items-center justify-center rounded-md"
+                      class="text-white bg-[#3E372338] text-lg w-[115px] h-[31px] text-center ml-5 lg:ml-auto -mt-1 flex items-center justify-center rounded-md"
                     >
                       Anklets
                     </h5>
@@ -1140,28 +1129,22 @@
           </div>
         </div>
       </section>
-      <!--  section -->
+      <!-- Swiper Categories  -->
 
-      <!-- Swiper Categories -->
+      <!-- section -->
       <section id="create_your_vendor_section" class="bg-black py-16">
         <div class="max-w-[1040px] mx-auto px-4">
           <div class="text-center bg-[#CFB76F] rounded-[33px] py-20 px-10">
-            <h1 class="font-bold text-black text-4xl md:text-[50px] mb-4">
-              It’s time to be one of our vendors
-            </h1>
-            <h5 class="text-black mb-6 text-xl">
-              Lorem Ipsum is simply Lorem Ipsum is simply.
-            </h5>
-            <a
-              href=""
+            <h1 class="font-bold text-black text-4xl md:text-[50px] mb-4"> It’s time to be one of our vendors</h1>
+            <h5 class="text-black mb-6 text-xl"> Lorem Ipsum is simply Lorem Ipsum is simply.</h5>
+            <a href=""
               class="inline-block text-[28px] font-semibold bg-white text-black rounded-[15px] px-6 py-3 shadow-sm hover:shadow-md transition duration-300"
-            >
-              Become a Vendor
+            > Become a Vendor
             </a>
           </div>
         </div>
       </section>
-      <!-- Swiper Categories -->
+      <!-- section -->
     </main>
     <!-- start:: footer -->
     <footer class="border-t border-[#545453]">
@@ -1366,6 +1349,10 @@
           disableOnInteraction: false,
         },
         breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesOffsetBefore:40,
+          },
           640: {
             slidesPerView: 2,
             spaceBetween: 20,

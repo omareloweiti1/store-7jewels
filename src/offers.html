@@ -249,13 +249,13 @@
           <li class="relative group">
             <a
               href="shop.html"
-              class="flex items-center gap-1 text-white transition"
+              class="flex items-center gap-1 text-[#D5C06C] hover:text-white transition"
             >
               Shop
             </a>
 
             <span
-              class="absolute left-0 -bottom-1  h-0.5 bg-[#D5C06C] transition-all duration-300 w-1/4"
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#D5C06C] transition-all duration-300 group-hover:w-1/4"
             ></span>
           </li>
 
@@ -289,13 +289,13 @@
             <a
               href="offers.html"
               onclick="toggleDropdown('dealsDropdown')"
-              class="flex items-center gap-1 text-[#D5C06C] hover:text-white transition"
+              class="flex items-center gap-1 text-white transition"
             >
               Offers
             </a>
 
             <span
-              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#D5C06C] transition-all duration-300 group-hover:w-1/4"
+              class="absolute left-0 -bottom-1 h-0.5 bg-[#D5C06C] transition-all duration-300 w-1/4"
             >
             </span>
           </li>
@@ -554,44 +554,27 @@
                     <!-- Text Column -->
                     <div class="w-full lg:w-8/12 px-4">
                       <div class="lg:w-[80%] text-black lg:mx-20">
-                        <h2 class="text-[53px] mb-4 lg:mt-12">Shop</h2>
-
-                        <nav class="text-sm mb-4" aria-label="Breadcrumb">
+                        <h2 class="text-[53px] mb-4 lg:mt-12">Offers</h2>
+                       
+                        <nav class="text-sm  mb-4" aria-label="Breadcrumb">
                           <ol class="list-none p-0 inline-flex">
                             <li class="flex items-center">
-                              <a
-                                href="index.html"
-                                class="hover:text-[#D5C04C] hover:bg-[#1F1F1E] text-[24px] rounded-xl p-2"
-                                >Home</a
-                              >
-                              <span class="mx-2">></span>
+                              <a href="index.html" class="hover:text-[#D5C04C] hover:bg-[#1F1F1E] text-[24px] rounded-xl p-2">Home</a>
+                              <span class="mx-2 text-[24px] pt-1 ">&gt;</span>
                             </li>
                             <li class="flex items-center">
-                              <span
-                                class="hover:text-[#D5C04C] hover:bg-[#1F1F1E] text-[24px] rounded-xl p-2"
-                                >Shop</span
-                              >
+                              <span class="hover:text-[#D5C04C] hover:bg-[#1F1F1E] text-[24px] rounded-xl p-2">Offers</span>
                             </li>
                           </ol>
                         </nav>
                       </div>
-                    </div>
-                    <!-- Map View Button -->
-                    <div class="absolute bottom-4 right-4">
-                      <button
-                        class="flex items-center gap-2 border border-[#505050] text-black px-[18px] py-2.5 text-lg rounded-lg hover:text-[#D5C04C] hover:bg-[#1F1F1E] font-semibold transition"
-                      >
-                        <i
-                          class="fa-solid fa-location-dot text-black text-2xl"
-                        ></i>
-                        Map View
-                      </button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
       <!-- Hero Section -->
@@ -604,140 +587,28 @@
             <div
               class="flex flex-col lg:flex-row items-center justify-between gap-4"
             >
-              <h2 class="text-[33px]">All</h2>
+              <h2 class="text-[33px]">Products</h2>
 
               <div class="flex items-center gap-3">
-                <!-- Container -->
-                <div class="relative inline-block text-left">
-                  <!-- Button -->
-                  <button
-                    id="toggleContinents"
-                    class="w-48 bg-[#262626] text-white px-4 py-3 rounded-lg border border-[#7E7E7E] flex justify-between items-center"
+                <!-- Country Filter -->
+                <div class="relative w-full max-w-xs">
+                  <select
+                    id="country_id"
+                    class="w-full appearance-none border border-[#7E7E7E] rounded-lg bg-[#1F1F1E] text-white text-center px-8 py-3 pr-12"
                   >
-                    Continents
-                    <!-- <span  class="transition-transform duration-200">▲</span> -->
-                    <svg
-                      id="arrow"
-                      class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M5.8 7l4.2 4.3L14.2 7"></path>
-                    </svg>
-                  </button>
+                    <option value="" disabled selected>Country</option>
+                    <option value="11">Argentina</option>
+                    <option value="27">Bolivia</option>
+                  </select>
 
-                  <!-- Dropdown -->
-                  <div
-                    id="continentsMenu"
-                    class="hidden absolute mt-2 w-56 bg-[#1F1F1E] text-white rounded-lg border border-[#3A3A3A] shadow-lg z-50"
+                  <svg
+                    class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
                   >
-                    <!-- Continent Item -->
-                    <div
-                      class="group relative px-4 py-3 hover:bg-[#2A2A2A] cursor-pointer flex justify-between items-center"
-                    >
-                      North America
-                      <span>›</span>
-
-                      <!-- Submenu -->
-                      <div
-                        class="hidden group-hover:block absolute top-0 left-full ml-1 w-48 bg-[#1F1F1E] border border-[#3A3A3A] rounded-lg shadow-lg"
-                      >
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">USA</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Canada</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Mexico</div>
-                      </div>
-                    </div>
-
-                    <div
-                      class="group relative px-4 py-3 hover:bg-[#2A2A2A] cursor-pointer flex justify-between items-center"
-                    >
-                      South America
-                      <span>›</span>
-                      <div
-                        class="hidden group-hover:block absolute top-0 left-full ml-1 w-48 bg-[#1F1F1E] border border-[#3A3A3A] rounded-lg shadow-lg"
-                      >
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">
-                          Argentina
-                        </div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Brazil</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Bolivia</div>
-                      </div>
-                    </div>
-
-                    <div
-                      class="group relative px-4 py-3 hover:bg-[#2A2A2A] cursor-pointer flex justify-between items-center"
-                    >
-                      Africa
-                      <span>›</span>
-                      <div
-                        class="hidden group-hover:block absolute top-0 left-full ml-1 w-48 bg-[#1F1F1E] border border-[#3A3A3A] rounded-lg shadow-lg"
-                      >
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Egypt</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Morocco</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">
-                          South Africa
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      class="group relative px-4 py-3 hover:bg-[#2A2A2A] cursor-pointer flex justify-between items-center"
-                    >
-                      Asia
-                      <span>›</span>
-                      <div
-                        class="hidden group-hover:block absolute top-0 left-full ml-1 w-48 bg-[#1F1F1E] border border-[#3A3A3A] rounded-lg shadow-lg"
-                      >
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">China</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Japan</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">India</div>
-                      </div>
-                    </div>
-
-                    <div
-                      class="group relative px-4 py-3 hover:bg-[#2A2A2A] cursor-pointer flex justify-between items-center"
-                    >
-                      Europe
-                      <span>›</span>
-                      <div
-                        class="hidden group-hover:block absolute top-0 left-full ml-1 w-48 bg-[#1F1F1E] border border-[#3A3A3A] rounded-lg shadow-lg"
-                      >
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Germany</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">France</div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">Italy</div>
-                      </div>
-                    </div>
-
-                    <div
-                      class="group relative px-4 py-3 hover:bg-[#2A2A2A] cursor-pointer flex justify-between items-center"
-                    >
-                      Australia
-                      <span>›</span>
-                      <div
-                        class="hidden group-hover:block absolute top-0 left-full ml-1 w-48 bg-[#1F1F1E] border border-[#3A3A3A] rounded-lg shadow-lg"
-                      >
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">
-                          Australia
-                        </div>
-                        <div class="px-4 py-2 hover:bg-[#2A2A2A]">
-                          New Zealand
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    <path d="M5.8 7l4.2 4.3L14.2 7"></path>
+                  </svg>
                 </div>
-
-                <!-- Toggle Script -->
-                <script>
-                  const btn = document.getElementById("toggleContinents");
-                  const menus = document.getElementById("continentsMenu");
-                  const arrow = document.getElementById("arrow");
-
-                  btn.addEventListener("click", () => {
-                    menus.classList.toggle("hidden");
-                    arrow.classList.toggle("rotate-180");
-                  });
-                </script>
 
                 <!-- Order By -->
                 <div class="relative w-full max-w-xs">
@@ -780,21 +651,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -814,21 +679,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -848,21 +707,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -882,21 +735,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -916,21 +763,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -950,21 +791,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -984,21 +819,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -1018,21 +847,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -1052,21 +875,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -1086,21 +903,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -1120,21 +931,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>
@@ -1154,21 +959,15 @@
                 </a>
 
                 <div class="p-4 text-left max-w-[300px] overflow-hidden">
-                  <!-- <h3 class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase">Sun Handmade Bracelet</h3> -->
-                  <!-- <h2 class="text-3xl text-white mb-3"><span>XDC</span>shop</h2> -->
-                  <div class="flex items-center space-x-2 mt-4 mb-3">
-                    <h2 class="text-white text-2xl">XDC</h2>
-                    <!-- <span class="text-[16px]">&gt;</span> -->
-                    <h2 class="text-white text-xl">shop</h2>
-                  </div>
+                  <h3
+                    class="text-[#ffffffab] text-xl tracking-widest mb-1 max-h-7 overflow-hidden uppercase"
+                  >
+                    Sun Handmade Bracelet
+                  </h3>
+                  <h2 class="text-3xl text-white mb-3"><span>$</span>640.00</h2>
                   <div class="flex justify-between items-center text-lg">
-                    <div class="flex items-center space-x-2">
-                      <span class="text-white font-medium uppercase">ASIA</span>
-                      <span class="text-[16px]">&gt;</span>
-                      <span class="text-[#E3B34F] font-medium uppercase"
-                        >CHINA</span
-                      >
-                    </div>
+                    <span class="text-[#E3B34F] font-medium">Numeral Shop</span>
+                    <span>Morocco</span>
                   </div>
                 </div>
               </div>

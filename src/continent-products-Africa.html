@@ -32,7 +32,7 @@
             alt="currency"
             class="w-5 h-5"
           />
-          <!-- 🌍 Currency Dropdown -->
+          <!--  Currency Dropdown -->
           <div class="relative">
             <button
               onclick="toggleDropdown('currencyMenu')"
@@ -196,11 +196,11 @@
           <li class="relative">
             <button
               onclick="toggleDropdown('categoriesDropdown')"
-              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+              class="group relative flex items-center gap-1 transition text-[#D5C06C] hover:text-white"
             >
               Categories
               <svg
-                class="w-3 h-3 text-[#D5C06C]"
+                class="w-3 h-3 text-[#D5C06C] group-hover:text-white transition"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -212,7 +212,11 @@
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#D5C06C] transition-all duration-300 group-hover:w-1/4"
+              ></span>
             </button>
+
             <ul
               id="categoriesDropdown"
               class="absolute left-0 hidden bg-black text-white mt-2 w-40 rounded-md shadow-lg border border-[#222]"
@@ -242,52 +246,17 @@
           </li>
 
           <!-- Dropdown: Occasions -->
-          <li class="relative">
-            <button
-              onclick="toggleDropdown('occasionsDropdown')"
-              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+          <li class="relative group">
+            <a
+              href="shop.html"
+              class="flex items-center gap-1 text-[#D5C06C] hover:text-white transition"
             >
-              Occasions
-              <svg
-                class="w-3 h-3 text-[#D5C06C]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <ul
-              id="occasionsDropdown"
-              class="absolute left-0 hidden bg-black text-white mt-2 w-44 rounded-md shadow-lg border border-[#222]"
-            >
-              <li>
-                <a
-                  href="wedding.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Wedding</a
-                >
-              </li>
-              <li>
-                <a
-                  href="birthday.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Birthday</a
-                >
-              </li>
-              <li>
-                <a
-                  href="anniversary.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Anniversary</a
-                >
-              </li>
-            </ul>
+              Shop
+            </a>
+
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#D5C06C] transition-all duration-300 group-hover:w-1/4"
+            ></span>
           </li>
 
           <!-- Logo in center -->
@@ -302,101 +271,33 @@
           </li>
 
           <!-- Dropdown: New Arrivals -->
-          <li class="relative">
-            <button
-              onclick="toggleDropdown('newArrivalsDropdown')"
-              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+          <li class="relative group">
+            <a
+              href="newArrivals.html"
+              class="flex items-center gap-1 text-[#D5C06C] hover:text-white transition"
             >
               New Arrivals
-              <svg
-                class="w-3 h-3 text-[#D5C06C]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <ul
-              id="newArrivalsDropdown"
-              class="absolute left-0 hidden bg-black text-white mt-2 w-40 rounded-md shadow-lg border border-[#222]"
-            >
-              <li>
-                <a
-                  href="rings.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Rings</a
-                >
-              </li>
-              <li>
-                <a
-                  href="necklaces.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Necklaces</a
-                >
-              </li>
-              <li>
-                <a
-                  href="bracelets.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Bracelets</a
-                >
-              </li>
-            </ul>
+            </a>
+
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#D5C06C] transition-all duration-300 group-hover:w-1/4"
+            ></span>
           </li>
 
           <!-- Dropdown: Deals -->
-          <li class="relative">
-            <button
+          <li class="relative group">
+            <a
+              href="offers.html"
               onclick="toggleDropdown('dealsDropdown')"
-              class="flex items-center gap-1 hover:text-[#f5d36b] transition"
+              class="flex items-center gap-1 text-[#D5C06C] hover:text-white transition"
             >
-              Deals
-              <svg
-                class="w-3 h-3 text-[#D5C06C]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <ul
-              id="dealsDropdown"
-              class="absolute left-0 hidden bg-black text-white mt-2 w-40 rounded-md shadow-lg border border-[#222]"
+              Offers
+            </a>
+
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#D5C06C] transition-all duration-300 group-hover:w-1/4"
             >
-              <li>
-                <a
-                  href="rings.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Rings</a
-                >
-              </li>
-              <li>
-                <a
-                  href="necklaces.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Necklaces</a
-                >
-              </li>
-              <li>
-                <a
-                  href="bracelets.html"
-                  class="block px-4 py-2 hover:bg-[#1a1a1a] hover:text-[#D5C06C]"
-                  >Bracelets</a
-                >
-              </li>
-            </ul>
+            </span>
           </li>
         </ul>
       </nav>
@@ -587,109 +488,34 @@
           </ul>
         </div>
 
-        <!--   Occasions -->
+        <!--   Shops -->
         <div class="border-b border-[#222] py-2">
-          <button
+          <a
+            href="shop.html"
             class="flex justify-between items-center w-full text-left"
-            onclick="toggleDropdown('occMenu')"
           >
-            <span>Occasions</span>
-            <svg
-              class="w-4 h-4 text-[#f5d36b]"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <ul
-            id="occMenu"
-            class="hidden mt-2 pl-4 space-y-1 text-sm text-white"
-          >
-            <li><a href="#" class="block hover:text-[#f5d36b]">Wedding</a></li>
-            <li><a href="#" class="block hover:text-[#f5d36b]">Birthday</a></li>
-            <li>
-              <a href="#" class="block hover:text-[#f5d36b]">Graduation</a>
-            </li>
-          </ul>
+            <span>Shops</span>
+          </a>
         </div>
 
         <!--   New Arrivals -->
         <div class="border-b border-[#222] py-2">
-          <button
+          <a
+            href="newArrivals.html"
             class="flex justify-between items-center w-full text-left"
-            onclick="toggleDropdown('arrivalsMenu')"
           >
             <span>New Arrivals</span>
-            <svg
-              class="w-4 h-4 text-[#f5d36b]"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <ul
-            id="arrivalsMenu"
-            class="hidden mt-2 pl-4 space-y-1 text-sm text-white"
-          >
-            <li><a href="#" class="block hover:text-[#f5d36b]">Rings</a></li>
-            <li>
-              <a href="#" class="block hover:text-[#f5d36b]">Necklaces</a>
-            </li>
-            <li>
-              <a href="#" class="block hover:text-[#f5d36b]">Bracelets</a>
-            </li>
-          </ul>
+          </a>
         </div>
 
-        <!--   Deals -->
+        <!--   Offers -->
         <div class="border-b border-[#222] py-2">
-          <button
+          <a
+            href="offers.html"
             class="flex justify-between items-center w-full text-left"
-            onclick="toggleDropdown('dealsMenu')"
           >
-            <span>Deals</span>
-            <svg
-              class="w-4 h-4 text-[#f5d36b]"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <ul
-            id="dealsMenu"
-            class="hidden mt-2 pl-4 space-y-1 text-sm text-white"
-          >
-            <li>
-              <a href="#" class="block hover:text-[#f5d36b]">Discounts</a>
-            </li>
-            <li>
-              <a href="#" class="block hover:text-[#f5d36b]">Limited Offers</a>
-            </li>
-            <li>
-              <a href="#" class="block hover:text-[#f5d36b]">Bundle Deals</a>
-            </li>
-          </ul>
+            <span>Offers</span>
+          </a>
         </div>
 
         <!--   Login / Register -->
@@ -832,8 +658,9 @@
             </button>
             <!-- Continents Links -->
             <div
-              id="continents-links" style="display:none"
-              class="absolute right-0 lg:top-1/2 lg:-translate-y-1/2 lg:right-2.5   flex-col lg:flex-row z-10 gap-6 lg:w-max px-10 py-6 lg:px-8 lg:py-3.5 bg-[#262626]/90 backdrop-blur-sm rounded-[30px] lg:rounded-full"
+              id="continents-links"
+              style="display: none"
+              class="absolute right-0 lg:top-1/2 lg:-translate-y-1/2 lg:right-2.5 flex-col lg:flex-row z-10 gap-6 lg:w-max px-10 py-6 lg:px-8 lg:py-3.5 bg-[#262626]/90 backdrop-blur-sm rounded-[30px] lg:rounded-full"
             >
               <a
                 href="continent-products-Asia.html"
@@ -1580,9 +1407,9 @@
 
       toggleButton.addEventListener("click", () => {
         if (linksContainer.style.display === "none") {
-          linksContainer.style.display = "flex"; 
+          linksContainer.style.display = "flex";
         } else {
-          linksContainer.style.display = "none"; 
+          linksContainer.style.display = "none";
         }
       });
     </script>
